@@ -674,7 +674,7 @@ for(a=0;a<assests_verification_array.length;a++){
 gj =superr_objj.verification_user_id;
 //alert(hj+'gg'+gj+''+huemploy+'qualification_id'+qualification_id);
 if( hj == gj && huemploy == qualification_id){
-  assest_inproa = assests_verification_array[a];
+  assest_inpro = assests_verification_array[a];
 //alert(employment_obja_inpod.user_id+'employment_records_array'+gj);
 }
 }
