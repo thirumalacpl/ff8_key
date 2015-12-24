@@ -31,7 +31,8 @@ if(regionArray_array == null){
 }
 
 region=regionArray_array.region;
-
+user_id=regionArray_array.user_id;
+//alert(user_id);
 
 regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
 username=regionArray_array.username;
@@ -116,7 +117,7 @@ alert('Network error has occurred please try again!');
 
 $(document).off('click', '#inprogress').on('click', '#inprogress', function() {
 //alert(region+'inprogress');
-$.ajax({url: 'http://fourthforce.in/verify/slim-fourth/dashinprogress.php?region='+region,
+$.ajax({url: 'http://fourthforce.in/verify/slim-fourth/dashinprogress.php?region='+region+"&user_id="+user_id,
   data:$('#new').serialize(),
   type: 'post',                   
   async: 'true',
@@ -187,7 +188,7 @@ alert('Network error has occurred please try again!');
 
 $(document).off('click', '#verified').on('click', '#verified', function() {
 //alert(region+'verified');
-$.ajax({url: 'http://fourthforce.in/verify/slim-fourth/dashverified.php?region='+region,
+$.ajax({url: 'http://fourthforce.in/verify/slim-fourth/dashverified.php?region='+region+"&user_id="+user_id,
   data:$('#new').serialize(),
   type: 'post',                   
   async: 'true',
@@ -257,7 +258,7 @@ alert('Network error has occurred please try again!');
 
 $(document).off('click', '#not_verified').on('click', '#not_verified', function() {
 //alert(region+'verified');
-$.ajax({url: 'http://fourthforce.in/verify/slim-fourth/dash_not_verified.php?region='+region,
+$.ajax({url: 'http://fourthforce.in/verify/slim-fourth/dash_not_verified.php?region='+region+"&user_id="+user_id,
   data:$('#new').serialize(),
   type: 'post',                   
   async: 'true',
@@ -326,7 +327,7 @@ alert('Network error has occurred please try again!');
 
 $(document).off('click', '#completed').on('click', '#completed', function() {
 //alert(region+'verified');
-$.ajax({url: 'http://fourthforce.in/verify/slim-fourth/completed.php?region='+region,
+$.ajax({url: 'http://fourthforce.in/verify/slim-fourth/completed.php?region='+region+"&user_id="+user_id,
   data:$('#newt').serialize(),
   type: 'post',                   
   async: 'true',
